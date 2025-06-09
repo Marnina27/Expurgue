@@ -1,0 +1,132 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Cores principais */
+:root {
+    --azul-claro: #00969f;
+    --azul-escuro: #2e3c95;
+    --dourado: #ddbf6e;
+    --branco: #ffffff;
+    --cinza-claro: #e6e6e6;
+}
+
+/* Corpo da página */
+body {
+    background-color: var(--branco);
+    color: #333;
+    padding: 20px;
+}
+  
+ /* Cabeçalho */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--branco);
+  padding: 10px 0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--azul-claro);
+  text-decoration: none; /* remove sublinhado */
+  cursor: pointer;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 500px;
+  margin: 0 30px;
+}
+  
+  main {
+    padding: 20px;
+  }
+  
+  .filtros h2 {
+    color: var(--azul-escuro);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: var(--branco);
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  .status {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: inline-block;
+  }
+  
+  .status.vermelho {
+    background-color: var(--dourado);
+    color: var(--branco);
+  }
+  
+  .status.azul {
+    background-color: var(--azul-claro);
+    color: var(--branco);
+  }
+  
+  .status.marcado {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+  }
+  
+  .acoes {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+  }
+  
+  button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: var(--branco);
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  #marcarBtn {
+    background-color: var(--azul-claro);
+  }
+  
+  #confirmarBtn {
+    background-color: var(--azul-escuro);
+  }
+  
+  #confirmarBtn:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+  }
+  
+  #relatorioBtn {
+      display: inline-block;
+      padding: 10px 14px;
+      background-color: var(--dourado);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+  

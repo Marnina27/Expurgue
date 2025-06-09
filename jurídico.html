@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expurgue | Engenharia</title>
+  <link rel="stylesheet" href="setor.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <a href="../dash.html" class="logo">Jurídico</a>
+    </header>
+    
+   
+
+ <section class="tabela">
+    <h3 style="margin-bottom: 10px;">Documentos Recentes</h3>
+    <input type="text" id="filtro" placeholder="🔍 Filtrar por descrição ou status..." />
+    <table>
+      <thead>
+        <tr><th>ID</th><th>Descrição</th><th>Tipo</th><th>Data</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>001</td><td>Relatório Anual</td><td>Relatório</td><td>15/01/2024</td><td>Ativo</td></tr>
+        <tr><td>002</td><td>Contrato de Terceirização</td><td>Contrato</td><td>03/03/2023</td><td>Expurgado</td></tr>
+      </tbody>
+    </table>
+  </section>
+ 
+ <section class="indicadores">
+    <div class="card azul"><p>Total de Documentos</p><h2>542</h2></div>
+    <div class="card dourado"><p>Em Análise</p><h2>112</h2></div>
+    <div class="card cinza"><p>Expurgados</p><h2>210</h2></div>
+    <div class="card verde"><p>Emprestados</p><h2>45</h2></div>
+  </section>
+  <section class="graficos">
+    <h3 style="margin-bottom: 20px;">Distribuição dos Documentos</h3>
+    <canvas id="graficoStatus"></canvas>
+  </section>
+
+ 
+
+  <footer class="rodape">Última atualização: 06/06/2025</footer>
+
+  <script>
+    const ctx = document.getElementById('graficoStatus').getContext('2d');
+    new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Ativos', 'Em Análise', 'Expurgados', 'Emprestados'],
+        datasets: [{
+          label: 'Status dos Documentos',
+          data: [175, 112, 210, 45],
+          backgroundColor: ['#2e3c95', '#ddbf6e', '#e6e6e6', '#00969f']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'bottom' }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+:root {
+    --azul-claro: #00969f;
+    --azul-escuro: #2e3c95;
+    --dourado: #ddbf6e;
+    --branco: #ffffff;
+    --cinza-claro: #e6e6e6;
+    --vermelho: #e74c3c;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--cinza-claro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .login-container {
+    background-color: var(--branco);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+  }
+  
+  .login-container h1 {
+    color: var(--azul-escuro);
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: var(--azul-claro);
+    color: var(--branco);
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: var(--azul-escuro);
+  }
+  
+  .mensagem-erro {
+    color: var(--vermelho);
+    font-size: 0.9em;
+  }
+  

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expurgue</title>
+    <link rel="stylesheet" href="pesquisa.css">
+</head>
+<body>
+    <header>
+        <a href="../Inicial/inicial.html" class="logo">Expurgue</a>
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar documentos..." id="campo-busca">
+      <span class="search-icon">🔍</span>
+    </div>
+    <div class="profile-icon"></div>
+  </header>
+
+    <main class="main">
+        <h1>Resultados da Pesquisa</h1>
+        <div class="tabela-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Número da Caixa</th>
+                        <th>Protocolo da Caixa</th>
+                        <th>Setor</th>
+                        <th>Documento</th>
+                        <th>Temporalidade</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-resultados">
+                    <!-- JS preencherá aqui -->
+                </tbody>
+            </table>
+        </div>
+        <div class="paginacao"></div>
+    </main>
+
+    <script src="pesquisa.js"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expurgue</title>
+  <link rel="stylesheet" href="cadastro.css" />
+</head>
+<body>
+  <header>
+    <a href="../Inicial/inicial.html" class="logo">Expurgue</a>
+    <div class="search-bar"></div>
+  </header>
+
+  <main class="formulario-container">
+  <form id="formCadastro">
+    <h1>Cadastro de Novo Documento</h1>
+
+    <h2>Seção 1: Identificação e Localização Física</h2>
+
+    <label for="sala">Sala:</label>
+<select id="sala">
+  <option value="A">A</option>
+  <option value="B">B</option>
+</select>
+
+<label>Localização (Prateleira) <span class="required">*</span></label>
+    <input type="text" id="prateleira" />
+
+    <label>Lado <span class="required">*</span></label>
+    <div class="lado-opcoes">
+      <label><input type="radio" name="lado" value="A" /> A</label>
+      <label><input type="radio" name="lado" value="B" /> B</label>
+    </div>
+
+    <label>Número da Caixa <span class="required">*</span></label>
+    <input type="number" id="numeroCaixa" />
+
+
+<h2>Seção 2: Identificação de  Setor</h2>
+
+    <label for="setor">Setor:</label>
+<select id="setor">
+  <option>ADMINISTRATIVO</option>
+  <option>ENGENHARIA</option>
+  <option>FAIXA DE DOMÍNIO</option>
+  <option>FROTAS</option>
+  <option>JURÍDICO</option>
+  <option>MEIO AMBIENTE</option>
+  <option>OUVIDORIA</option>
+  <option>PCO/CCO</option>
+  <option>PRAÇAS DE PEDÁGIO</option>
+  <option>QUALIDADE</option>
+  <option>RECURSOS HUMANOS</option>
+  <option>SSO</option>
+  <option>TI</option>
+</select>
+
+    <h2>Seção 3: Temporalidade e Tipo de Documento</h2>
+    <label>Temporalidade <span class="required">*</span></label>
+    <select id="temporalidade">
+      <option value="">Selecionar temporalidade</option>
+      <option value="Permanente">Permanente</option>
+      <option value="Indeterminado">Indeterminado</option>
+      <option value="2 anos">2 anos</option>
+      <option value="5 anos">5 anos</option>
+      <option value="10 anos">10 anos</option>
+    </select>
+
+    <label for="tipoDocumento">Tipo de Documento:</label>
+<select id="tipoDocumento">
+  <option>AR</option>
+  <option>AT</option>
+  <option>AX</option>
+  <option>BM</option>
+  <option>CM</option>
+  <option>CE</option>
+  <option>CG</option>
+  <option>CK</option>
+  <option>CL</option>
+  <option>CN</option>
+  <option>CO</option>
+  <option>CR</option>
+  <option>CT</option>
+  <option>CC</option>
+  <option>CV</option>
+  <option>DD</option>
+  <option>DF</option>
+  <option>DG</option>
+  <option>DN</option>
+  <option>DR</option>
+  <option>DT</option>
+  <option>EO</option>
+  <option>ET</option>
+  <option>FL</option>
+  <option>FT</option>
+  <option>GL</option>
+  <option>GR</option>
+  <option>IN</option>
+  <option>IT</option>
+  <option>LB</option>
+  <option>LE</option>
+  <option>LI</option>
+  <option>LM</option>
+  <option>LS</option>
+  <option>MA</option>
+  <option>MC</option>
+  <option>MD</option>
+  <option>NT</option>
+  <option>OF</option>
+  <option>PM</option>
+  <option>PA</option>
+  <option>PC</option>
+  <option>PL</option>
+  <option>PO</option>
+  <option>PN</option>
+  <option>PT</option>
+  <option>PR</option>
+  <option>PC</option>
+  <option>OS</option>
+  <option>PX</option>
+  <option>RD</option>
+  <option>RF</option>
+  <option>RG</option>
+  <option>RS</option>
+  <option>RT</option>
+  <option>SG</option>
+  <option>TA</option>
+  <option>TB</option>
+  <option>TF</option>
+  <option>TC</option>
+  <option>TR</option>
+  <option>TD</option>
+  <option>TP</option>
+  <option>TE</option>
+  <option>VD</option>
+  <option>XR</option>
+</select>
+
+<label for="dataEntrada">Data de Entrada:</label>
+<input type="date" id="dataEntrada">
+
+    <h2>Anexos (Obrigatório)</h2>
+    <label>Foto da Caixa <span class="required">*</span></label>
+    <input type="file" id="fotoCaixa" accept=".jpg,.jpeg,.png" />
+    <div id="previewFoto"></div>
+
+    <label>Guia de Remessa <span class="required">*</span></label>
+    <input type="file" id="guiaRemessa" accept=".pdf" />
+    <div id="previewGuia"></div>
+
+    <h2>Protocolo de Documentos Digitais (Opcional)</h2>
+    <label>Protocolo(s) Digital(is)</label>
+    <input type="text" id="protocoloDigital" />
+
+    <label>Protocolo Gerado</label>
+    <input type="text" id="protocolo" readonly />
+
+   <div class="botoes-acao">
+      <button type="submit" class="btn-salvar">Salvar Documento</button>
+      <button type="reset" class="btn-limpar">Limpar Formulário</button>
+      <button type="button" class="btn-cancelar">Cancelar</button>
+    </div>
+  </form>
+</main>
+
+  <script src="cadastro.js"></script>
+</body>
+</html>

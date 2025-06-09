@@ -1,0 +1,113 @@
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Cores principais */
+:root {
+    --azul-claro: #00969f;
+    --azul-escuro: #2e3c95;
+    --dourado: #ddbf6e;
+    --branco: #ffffff;
+    --cinza-claro: #e6e6e6;
+}
+
+/* Corpo da página */
+body {
+    background-color: var(--branco);
+    color: #333;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--branco);
+    padding: 10px 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--azul-claro);
+    text-decoration: none; /* remove sublinhado */
+    cursor: pointer;
+  }
+.indicadores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+  margin: 30px 0;
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.azul { border-left: 5px solid #2e3c95; }
+.dourado { border-left: 5px solid #ddbf6e; }
+.cinza { border-left: 5px solid #999; }
+.verde { border-left: 5px solid #00969f; }
+.graficos {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+.tabela {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+.tabela input {
+  padding: 8px;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+.rodape {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #e6e6e6;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.graficos {
+flex: 2; 
+min-width: 300px; 
+background: white; 
+padding: 20px; 
+border-radius: 10px;
+height: 15cm;
+width: 15cm;
+align-items: center;
+  
+}
+#graficoStatus {
+  max-width: 40cm;
+  max-height: 40cm;
+}

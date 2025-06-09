@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expurgue</title>
+  <link rel="stylesheet" href="expurgo.css" />
+</head>
+<body>
+  <header>
+    <a href="../Inicial/inicial.html" class="logo">Expurgue</a>
+    <div class="search-bar"></div>
+    <div class="profile-icon"></div>
+  </header>
+
+  <main>
+    <section class="filtros">
+      <h2>Filtros de Expurgo</h2>
+      <!-- Você pode implementar filtros aqui -->
+    </section>
+
+    <section class="tabela-expurgo">
+      <table>
+        <thead>
+          <tr>
+            <th><input type="checkbox" id="selecionarTodos" /></th>
+            <th>Número da Caixa</th>
+            <th>Protocolo</th>
+            <th>Área</th>
+            <th>Tipo de Documento</th>
+            <th>Temporalidade</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-status="expurgavel">
+            <td><input type="checkbox" class="doc-checkbox" /></td>
+            <td>003</td>
+            <td>EXP-2023-0010</td>
+            <td>RH</td>
+            <td>Contratos</td>
+            <td>2023</td>
+            <td><span class="status vermelho">Vermelho</span></td>
+          </tr>
+          <tr data-status="expurgavel">
+            <td><input type="checkbox" class="doc-checkbox" /></td>
+            <td>012</td>
+            <td>EXP-2024-0055</td>
+            <td>Financeiro</td>
+            <td>Notas Fiscais</td>
+            <td>2024</td>
+            <td><span class="status azul">Azul</span></td>
+          </tr>
+          <tr data-status="expurgavel">
+            <td><input type="checkbox" class="doc-checkbox" /></td>
+            <td>015</td>
+            <td>EXP-2021-0001</td>
+            <td>Financeiro</td>
+            <td>Balanços</td>
+            <td>2021</td>
+            <td><span class="status marcado">Marcado</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="acoes">
+        <button id="marcarBtn">Marcar para Expurgo</button>
+        <button id="confirmarBtn" disabled>Confirmar Expurgo</button>
+        <a href="../Fragmentação/fragmentacao.html" id="relatorioBtn">Gerar Relatório</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="expurgo.js"></script>
+</body>
+</html>

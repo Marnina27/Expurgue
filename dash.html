@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Expurgue</title>
+  <link rel="stylesheet" href="dash.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.umd.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <a href="../Inicial/inicial.html" class="logo">Expurgue</a>
+    <section class="painel">
+      <div class="card" title="Quantidade total de caixas físicas no acervo">
+        <h5>Total de Caixas</h5>
+        <p id="caixasFisicas">1030</p>
+      </div>
+    </section>
+  </header>
+
+  <main>
+     <section class="areas">
+      <h2>Acesso por Área</h2>
+      <div class="botoes-areas">
+        <a href="areas/administrativo.html" class="btn-area"><i class="fas fa-building"></i> Administrativo</a>
+        <a href="areas/engenharia.html" class="btn-area"><i class="fas fa-drafting-compass"></i> Engenharia</a>
+        <a href="areas/faixa_de_domínio.html" class="btn-area"><i class="fas fa-road"></i> Faixa de Domínio</a>
+        <a href="areas/frotas.html" class="btn-area"><i class="fas fa-truck-moving"></i> Frotas</a>
+        <a href="areas/jurídico.html" class="btn-area"><i class="fas fa-gavel"></i> Jurídico</a>
+        <a href="areas/meio_ambiente.html" class="btn-area"><i class="fas fa-leaf"></i> Meio Ambiente</a>
+        <a href="areas/ouvidoria.html" class="btn-area"><i class="fas fa-headset"></i> Ouvidoria</a>
+        <a href="areas/pco_cco.html" class="btn-area"><i class="fas fa-project-diagram"></i> PCO/CCO</a>
+        <a href="areas/praças_de_pedágio.html" class="btn-area"><i class="fas fa-toll"></i> Praças de Pedágio</a>
+        <a href="areas/qualidade.html" class="btn-area"><i class="fas fa-check-circle"></i> Qualidade</a>
+        <a href="areas/recursos_humanos.html" class="btn-area"><i class="fas fa-users"></i> Recursos Humanos</a>
+        <a href="areas/sso.html" class="btn-area"><i class="fas fa-shield-alt"></i> SSO</a>
+        <a href="areas/ti.html" class="btn-area"><i class="fas fa-desktop"></i> TI</a>
+      </div>
+    </section>
+<section class="graficos">
+  <div class="card" title="Áreas que mais produziram documentos">
+    <h2>Documentos Mais Produzidos</h2>
+    <canvas id="chartArea"></canvas>
+  </div>
+
+  <div class="card" title="Meses com mais entradas de documentos">
+    <h2>Períodos com Mais Entradas</h2>
+    <canvas id="chartPeriodo"></canvas>
+  </div>
+</section>
+
+  <script src="dash.js"></script>
+</body>
+</html>

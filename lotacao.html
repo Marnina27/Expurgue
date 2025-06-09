@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Expurgue - Lotação</title>
+    <link rel="stylesheet" href="lotacao.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header>
+    <a href="../Inicial/inicial.html" class="logo">Expurgue</a>
+    <span class="search-icon"></span>
+</header>
+
+<div class="painel-container">
+    <div class="painel">
+        <h2>📊 Lotação de Documentos</h2>
+        <div class="botoes-salas">
+            <button onclick="atualizaGraficos('A')">Sala A</button>
+            <button onclick="atualizaGraficos('B')">Sala B</button>
+            <button onclick="atualizaGraficos('Total')">Total</button>
+        </div>
+        <div class="graficos-container">
+            <div class="grafico-box">
+                <canvas id="graficoBarras"></canvas>
+            </div>
+            <div class="grafico-box">
+                <canvas id="graficoPizza"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="capacidade">
+        <h2 id="tituloCapacidade">Capacidade</h2>
+        <canvas id="medidorCapacidade" width="100" height="300"></canvas>
+    </div>
+</div>
+
+<script src="lotacao.js"></script>
+</body>
+</html>

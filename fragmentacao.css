@@ -1,0 +1,96 @@
+@media print {
+  #btnImprimir { display: none; }
+}
+
+/* Reset básico */
+* { margin:0; padding:0; box-sizing:border-box; }
+/* Container centralizado */
+.form-container {
+  width: 19cm;         /* largura aproximada A4 com margens */
+  margin: auto;
+  padding: 1cm;
+  background: white;
+  font-family: 'Segoe UI', sans-serif;
+  color: #000;
+  border: 1px solid #aaa;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 1cm;
+}
+.cedoc {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.titulo {
+  font-size: 1.5rem;
+  margin-top: 0.2cm;
+  text-decoration: underline;
+}
+
+/* Introdução */
+.intro p {
+  font-size: 1rem;
+  margin-bottom: 0.8cm;
+}
+
+/* Seção de identificação */
+.ident-doc h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4cm;
+}
+.ident-doc table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1cm;
+}
+.ident-doc th,
+.ident-doc td {
+  border: 1px solid #333;
+  padding: 4px 6px;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* Observação */
+.observacao h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.2cm;
+}
+.observacao .campo-texto {
+  height: 2.5cm;
+  border: 1px solid #333;
+  margin-bottom: 1cm;
+}
+
+/* Grupos de campos */
+.campos {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8cm;
+}
+.campos div {
+  width: 30%;
+}
+.campos label {
+  font-size: 0.95rem;
+}
+.linha {
+  display: inline-block;
+  width: 100%;
+  border-bottom: 1px solid #333;
+  margin-top: 0.2cm;
+}
+
+/* Botão imprimir */
+footer {
+  text-align: center;
+  margin-top: 1cm;
+}
+#btnImprimir {
+  padding: 6px 12px;
+  font-size: 1rem;
+  cursor: pointer;
+}

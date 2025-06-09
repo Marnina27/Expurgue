@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expurgue</title>
+  <link rel="stylesheet" href="chave.css" />
+</head>
+<body>
+  <header>
+    <a href="../Inicial/inicial.html" class="logo">Expurgue</a>
+    <div class="search-bar"></div>
+  </header>
+
+  <main>
+    <section class="escolha">
+      <h2>O que deseja fazer?</h2>
+      <div class="botoes">
+        <button onclick="mostrarFormulario('imediato')">Solicitar Agora</button>
+        <button onclick="mostrarFormulario('agendar')">Agendar Empréstimo</button>
+      </div>
+    </section>
+
+    <section id="formulario-imediato" class="formulario" style="display:none;">
+      <h2>Solicitação Imediata</h2>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" placeholder="Digite seu nome" />
+
+      <label for="area">Área:</label>
+      <input type="text" id="area" placeholder="Digite sua área" />
+
+      <div class="botoes">
+        <button onclick="registrarEmprestimo()">Registrar Retirada</button>
+        <button onclick="registrarDevolucao()">Registrar Devolução</button>
+      </div>
+    </section>
+
+    <section id="formulario-agendar" class="formulario" style="display:none;">
+      <h2>Agendamento da Chave</h2>
+      <label for="agendar-nome">Nome:</label>
+      <input type="text" id="agendar-nome" placeholder="Digite seu nome" />
+
+      <label for="agendar-area">Área:</label>
+      <input type="text" id="agendar-area" placeholder="Digite sua área" />
+
+      <label for="data-agendada">Data:</label>
+      <input type="date" id="data-agendada" />
+
+      <button onclick="agendarChave()">Agendar</button>
+    </section>
+
+    <section class="historico">
+      <h2>Histórico de Movimentações</h2>
+      <div class="tabela-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Área</th>
+              <th>Ação</th>
+              <th>Data</th>
+              <th>Hora</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-movimentos"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="chave.js"></script>
+</body>
+</html>

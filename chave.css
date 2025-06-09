@@ -1,0 +1,129 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Cores principais */
+:root {
+    --azul-claro: #00969f;
+    --azul-escuro: #2e3c95;
+    --dourado: #ddbf6e;
+    --branco: #ffffff;
+    --cinza-claro: #e6e6e6;
+}
+
+/* Corpo da página */
+body {
+    background-color: var(--azul-claro);
+    color: #333;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--azul-claro);
+    padding: 10px 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--branco);
+    text-decoration: none; /* remove sublinhado */
+    cursor: pointer;
+  }
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 500px;
+    margin: 0 30px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px 0 0 6px;
+  outline: none;
+}
+
+/* Seções */
+section {
+  background: var(--branco);
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  color: var(--azul-escuro);
+  margin-bottom: 15px;
+}
+
+/* Botões */
+.botoes {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+button {
+  background-color: var(--azul-claro);
+  color: var(--branco);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--azul-escuro);
+}
+
+/* Inputs */
+input[type="text"], input[type="date"] {
+  padding: 10px;
+  margin: 6px 0 12px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Tabela */
+.tabela-container {
+  max-height: 300px;
+  overflow-y: auto;
+  border-radius: 6px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+th {
+  background-color: var(--dourado);
+  color: #000;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}

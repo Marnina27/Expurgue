@@ -1,0 +1,123 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Cores principais */
+:root {
+    --azul-claro: #00969f;
+    --azul-escuro: #2e3c95;
+    --dourado: #ddbf6e;
+    --branco: #ffffff;
+    --cinza-claro: #e6e6e6;
+}
+
+/* Corpo da página */
+body {
+    background-color: var(--branco);
+    color: #333;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--branco);
+    padding: 10px 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--azul-claro);
+    text-decoration: none; /* remove sublinhado */
+    cursor: pointer;
+  }
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 500px;
+    margin: 0 30px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px 0 0 6px;
+    outline: none;
+}
+
+.search-icon {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 5px;
+}
+.nav {
+    display: flex;
+    gap: 0.5rem;
+}
+.nav-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: none;
+    color: #00969f;
+    cursor: pointer;
+}
+.nav-btn.destaque {
+    color: #ddbf6e;
+    font-weight: bold;
+}
+.main {
+    padding: 2rem;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+thead {
+    background-color: #00969f;
+    color: white;
+}
+th, td {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+.status {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+.status.verde { background: #00969f; }
+.status.azul { background: #2e3c95; }
+.status.vermelho { background: #ddbf6e; }
+.paginacao {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.paginacao button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #2e3c95;
+    color: white;
+    cursor: pointer;
+}
+.paginacao span {
+    font-weight: bold;
+}

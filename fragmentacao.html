@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Expurgue</title>
+  <link rel="stylesheet" href="fragmentacao.css">
+</head>
+<body>
+  <div class="form-container">
+    <header>
+      <div class="cedoc">CEDOC</div>
+      <div class="titulo">AUTORIZAÇÃO DE FRAGMENTAÇÃO</div>
+    </header>
+
+    <section class="intro">
+      <p>
+        Em: <span id="data-geracao"></span>  
+        foi autorizado a eliminação dos documentos relacionados abaixo,  
+        seguindo os critérios de temporariedade documental. :contentReference[oaicite:0]{index=0}:contentReference[oaicite:1]{index=1}
+      </p>
+    </section>
+
+    <section class="ident-doc">
+      <h2>IDENTIFICAÇÃO DO DOCUMENTO</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Caixa</th>
+            <th>Protocolo</th>
+            <th>Área</th>
+            <th>Tipo</th>
+            <th>Temporalidade</th>
+            <th>Quantidade</th>
+          </tr>
+        </thead>
+        <tbody id="tabela-docs">
+          <!-- Linhas serão preenchidas por JS -->
+        </tbody>
+      </table>
+    </section>
+
+    <section class="observacao">
+      <h2>Observação:</h2>
+      <div class="campo-texto"></div>
+    </section>
+
+    <section class="aprovacao">
+      <h2>Responsável pela aprovação da fragmentação:</h2>
+      <div class="campos">
+        <div><label>Nome:</label><span class="linha"></span></div>
+        <div><label>Área:</label><span class="linha"></span></div>
+        <div><label>Data:</label><span class="linha" id="data-aprovador"></span></div>
+      </div>
+    </section>
+
+    <section class="acompanhado">
+      <h2>Fragmentação acompanhado por:</h2>
+      <div class="campos">
+        <div><label>Nome:</label><span class="linha"></span></div>
+        <div><label>Área:</label><span class="linha"></span></div>
+        <div><label>Data:</label><span class="linha" id="data-acompanhante"></span></div>
+      </div>
+    </section>
+
+    <footer>
+      <button id="btnImprimir">Imprimir</button>
+    </footer>
+  </div>
+
+  <script>
+    // Dados simulados para impressão
+    const docs = [
+      { caixa:'003', protocolo:'EXP-2023-0010', area:'RH', tipo:'Contrato', temporalidade:'2023', quantidade:1 },
+      { caixa:'015', protocolo:'EXP-2021-0001', area:'Financeiro', tipo:'Balanço', temporalidade:'2021', quantidade:1 }
+    ];
+
+    function formatarData() {
+      const hoje = new Date().toLocaleDateString('pt-BR');
+      document.getElementById('data-geracao').textContent = hoje;
+      document.getElementById('data-aprovador').textContent = hoje;
+      document.getElementById('data-acompanhante').textContent = hoje;
+    }
+
+    function preencherTabela() {
+      const tbody = document.getElementById('tabela-docs');
+      docs.forEach(d => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>${d.caixa}</td>
+          <td>${d.protocolo}</td>
+          <td>${d.area}</td>
+          <td>${d.tipo}</td>
+          <td>${d.temporalidade}</td>
+          <td>${d.quantidade}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    document.getElementById('btnImprimir').addEventListener('click', () => {
+      window.print();
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      formatarData();
+      preencherTabela();
+    });
+  </script>
+</body>
+</html>

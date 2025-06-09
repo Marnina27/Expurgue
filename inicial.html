@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expurgue</title>
+  <link rel="stylesheet" href="inicial.css">
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <div class="logo">Expurgue</div>
+      <span class="search-icon"></span>
+  </header>
+
+  <!-- Botões de navegação -->
+  <nav class="nav-buttons">
+    <a href="../cadastro/cadastro.html" class="btn-cadastro">📄 Cadastro de Doc</a>
+    <a href="../Busca/pesquisa.html" class="busca">🔍 Busca</a>
+    <a href="../Expurgo/expurgo.html" class="expurgar">🗑️ Expurgar</a>
+    <a href="../Emprestimo/emprestimo.html" class="emprestimo">🔄 Empréstimo</a>
+    <a href="../Chave/chave.html" class="chave">🗝️Chave Cedoc</a>
+    <a href="../Dashboard/dash.html" class="dash">📊Dashboard</a>
+    <a href="../Lotação/lotacao.html" class="lotacao">🗂️Lotação</a>
+  </nav>
+
+  <!-- Conteúdo principal -->
+  <main class="container">
+
+    <!-- Mural de avisos -->
+    <aside class="mural">
+      <h2>Mural de Avisos</h2>
+    
+      <section class="aviso mes">
+  <h3>📅 Vencimento em 1 Mês</h3>
+  <ul>
+    <li><a href="#" title="Relatório Financeiro Completo">Relatório Financeiro</a></li>
+    <li><a href="#" title="Contrato com Fornecedor A">Contrato Fornecedor A</a></li>
+  </ul>
+  <button class="ver-mais" data-periodo="1 mês">Ver mais</button>
+</section>
+
+<section class="aviso semana">
+  <h3>⏳ Vencimento em 1 Semana</h3>
+  <ul>
+    <li><a href="#" title="Pagamento programado para próxima semana">Próximo Pagamento</a></li>
+    <li><a href="#" title="Licença de Software expirando">Licença de Software</a></li>
+  </ul>
+  <button class="ver-mais" data-periodo="1 semana">Ver mais</button>
+</section>
+
+<section class="aviso dia">
+  <h3>⚠️ Vencimento em 1 Dia</h3>
+  <ul>
+    <li><a href="#" title="Documento urgente a ser revisado">Documento Urgente X</a></li>
+    <li><a href="#" title="Protocolo com prazo iminente">Protocolo Y</a></li>
+  </ul>
+  <button class="ver-mais" data-periodo="1 dia">Ver mais</button>
+</section>
+
+<!-- Modal para "Ver mais" -->
+<div id="modalAviso" class="modal">
+  <div class="modal-conteudo">
+    <span class="fechar">&times;</span>
+    <h3 id="modalTitulo"></h3>
+    <ul id="modalLista">
+      <!-- Documentos adicionais serão inseridos via JS -->
+    </ul>
+  </div>
+</div>
+
+    </aside>
+    
+
+    <!-- Conteúdo dinâmico com dashboard -->
+    <section class="conteudo">
+      <h2 style="margin-bottom: 10px;">📊 Painel de Documentos</h2>
+      <div style="margin-bottom: 20px;">
+        <button class="filtro-area" data-area="RH">RH</button>
+        <button class="filtro-area" data-area="Financeiro">Financeiro</button>
+        <button class="filtro-area" data-area="TI">TI</button>
+        <button class="filtro-area" data-area="Jurídico">Jurídico</button>
+      </div>
+      <div style="display: flex; gap: 20px; justify-content: center;">
+        <div style="flex: 1; min-width: 300px; background: white; padding: 20px; border-radius: 10px;">
+          <canvas id="graficoArea" style="width: 100%; height: 300px;"></canvas>
+        </div>
+        <div style="flex: 1; min-width: 300px; background: white; padding: 20px; border-radius: 10px;">
+          <canvas id="graficoCategoria" style="width: 100%; height: 300px;"></canvas>
+        </div>
+      </div>
+           
+      </div>
+    </section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="inicial.js"></script>
+</body>
+</html>

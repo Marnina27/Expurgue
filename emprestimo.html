@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Expurgue</title>
+  <link rel="stylesheet" href="emprestimo.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+   <header>
+    <a href="../Inicial/inicial.html" class="logo">Expurgue</a>
+    <div class="search-bar">
+      <span class="search-icon"></span>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="titulo">Gerenciar Empréstimos</h1>
+
+     <!-- EMPRÉSTIMOS ATIVOS -->
+    <section class="emprestimos-ativos">
+      <h2>Empréstimos Ativos</h2>
+
+      <!-- FILTROS -->
+      <div class="filtros">
+        <label>Usuário:
+          <select>
+            <option>Todos</option>
+            <option>João</option>
+            <option>Ana</option>
+            <option>Maria</option>
+          </select>
+        </label>
+
+        <label>Status:
+          <select>
+            <option>Todos</option>
+            <option>Pendente</option>
+            <option>Em Aberto</option>
+            <option>Atrasado</option>
+            <option>Devolvido</option>
+          </select>
+        </label>
+
+        <label>Data de Solicitação:
+          <input type="date"> até <input type="date">
+        </label>
+
+        <button>Filtrar</button>
+      </div>
+
+      <!-- TABELA -->
+      <table>
+        <thead>
+          <tr>
+            <th>Caixa / Protocolo</th>
+            <th>Solicitante</th>
+            <th>Solicitação</th>
+            <th>Devolução Prevista</th>
+            <th>Status</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>007 / EXP-2025-0007</td>
+            <td>Ana Paula</td>
+            <td>02/05/2025</td>
+            <td>16/05/2025</td>
+            <td><span class="status pendente">● Pendente</span></td>
+            <td><button>Aprovar</button> <button class="rejeitar">Rejeitar</button></td>
+          </tr>
+          <tr>
+            <td>001 / EXP-2025-0001</td>
+            <td>João Silva</td>
+            <td>01/05/2025</td>
+            <td>15/05/2025</td>
+            <td><span class="status aberto">● Em Aberto</span></td>
+            <td><button>Marcar Devolvido</button></td>
+          </tr>
+          <tr>
+            <td>005 / EXP-2025-0005</td>
+            <td>Maria Souza</td>
+            <td>25/04/2025</td>
+            <td>08/05/2025</td>
+            <td><span class="status atrasado">● Atrasado</span></td>
+            <td><button>Marcar Devolvido</button> <button>Editar Data</button></td>
+          </tr>
+          <tr>
+            <td>003 / EXP-2025-0003</td>
+            <td>Carlos Gomes</td>
+            <td>20/04/2025</td>
+            <td>04/05/2025</td>
+            <td><span class="status devolvido">● Devolvido</span></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="emprestimo.js"></script>
+</body>
+</html>
